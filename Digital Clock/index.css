@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins' sans-serif;
+    box-sizing: border-box;
+}
+
+.hero {
+    width: 100%;
+    min-height: 94vh;
+    background: linear-gradient(45deg, rgb(0, 255, 204), rgba(128, 128, 128, 0.707));
+    color: aliceblue;
+    position: relative;
+}
+
+.container {
+    width: 800px;
+    height: 150px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.clock {
+    width: 100%;
+    height: 100%;
+    background: #961bf45b;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    backdrop-filter: blur(40px);
+}
+
+.clock span {
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.clock span::after {
+
+    font-size: 16px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#hrs::after {
+    content: 'HOURS';
+}
+
+#min::after {
+    content: 'MINS';
+}
+
+#sec::after {
+    content: 'SECS';
+}
+
+footer {
+    margin-top: 0px;
+    background: #416affbd;
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 20px;
+        height: 0px;
+
+        text-align: center;
+
+    }
+
+    .clock {
+
+        height: 50%;
+        font-size: 15px;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .hero {
+        width: 100%;
+        min-height: 90vh;
+        background: linear-gradient(45deg, rgb(0, 255, 204), rgba(128, 128, 128, 0.707));
+        color: aliceblue;
+        position: relative;
+    }
+
+    .clock span {
+        font-size: 40px;
+        width: 80px;
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        display: block;
+
+
+    }
+}
